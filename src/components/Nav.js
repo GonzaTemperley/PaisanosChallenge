@@ -38,7 +38,7 @@ const useStyles = makeStyles(() => ({
         fontWeight: 700,
         fontSize: 16,
         lineHeight: 24,
-        marginRight: 90,
+        marginRight: 10,
         cursor: 'pointer',
         alignItems: 'center'
     },
