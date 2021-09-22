@@ -63,15 +63,15 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonRow: {
     backgroundColor: '#fed530'
+  },
+  input: {
+    color: 'white'
   }
 }))
 
 const CssTextField = styled(TextField)({
   '& label.Mui-focused': {
     color: '#fed530',
-  },
-  '& .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root': {
-    color: '#6e6e75'
   },
   '& .MuiInput-underline:after': {
     borderBottomColor: '#fed530',
@@ -127,6 +127,7 @@ export default function Nav() {
               InputProps={{
                 endAdornment: <InputAdornment position="end"><ColorButton className={classes.buttonRow} onClick={handleOnClick}><img src={row} alt='row' /></ColorButton></InputAdornment>,
               }}
+              inputProps={{style:{color: '#fed530'}}}
             /> </div>
         </div>
         <div className={classes.containerItems}>
