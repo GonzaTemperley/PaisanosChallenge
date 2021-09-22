@@ -75,11 +75,11 @@ export default function MovieDetail() {
     } else if (!hero && !id) {
       dispatch(getHero())
     }
-  }, [moviesDetail, movie, id])
+  }, [moviesDetail, movie, id, dispatch, hero])
 
   const handleOnBack = useCallback(() => {
     history.push('/')
-  }, [])
+  }, [history])
 
   const handleOnClickButton = useCallback(() => {
     window.open(

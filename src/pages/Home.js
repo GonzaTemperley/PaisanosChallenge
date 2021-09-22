@@ -53,7 +53,7 @@ export default function Home() {
     if (!movies.length) {
       dispatch(getMovies())
     }
-  }, [movies])
+  }, [movies, dispatch])
 
   return (
     !isLoading ? <> <MovieDetail />

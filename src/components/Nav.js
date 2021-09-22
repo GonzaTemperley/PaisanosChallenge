@@ -68,11 +68,11 @@ export default function Nav() {
         } else if (value) {
             setSearchError(true)
         }
-    }, [movies])
+    }, [movies, history])
 
     const handleGoHome = useCallback(() => {
         history.push('/')
-    }, [])
+    }, [history])
 
     const handleGoFooter = function () {
         window.location.hash = "#Footer";
@@ -80,7 +80,7 @@ export default function Nav() {
 
     const handleGoWIP = useCallback(() => {
         history.push('/wip')
-    }, [])
+    }, [history])
 
     return (
         <div className={classes.container}>

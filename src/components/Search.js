@@ -31,17 +31,17 @@ export default function Search({ placeholder = '', onSearch }) {
 
     const handleOnClick = useCallback(() => {
         onSearch(search)
-    }, [search])
+    }, [search, onSearch])
 
     const handleOnChange = useCallback((e) => {
         setSearch(e.target.value)
-    }, [search])
+    }, [])
 
     const handleOnKeyPress = useCallback((e) => {
         if (e.charCode === 13 || e.which === 13 || e.key === 'Enter') {
             handleOnClick()
         }
-    }, [search, handleOnClick])
+    }, [handleOnClick])
 
     return (
         <div className={classes.search}>

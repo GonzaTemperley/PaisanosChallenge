@@ -38,7 +38,7 @@ export default function Trailers() {
         if (!trailers) {
             dispatch(getTrailers())
         }
-    }, [trailers])
+    }, [trailers, dispatch])
 
     return (
         <div className={classes.container} >
@@ -48,7 +48,7 @@ export default function Trailers() {
             <Grid container spacing={1} classes={{ root: classes.root }}>
                 {trailers?.map((trailer) => (
                     <Grid item xs={2} classes={{ item: classes.item }} key={trailer._id}>
-                        <img src={trailer.trailerImage} className={classes.img} />
+                        <img src={trailer.trailerImage} alt='trailerImg' className={classes.img} />
                     </Grid>
                 ))}
             </Grid>

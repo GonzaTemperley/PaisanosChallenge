@@ -59,7 +59,7 @@ export default function MovieCover({ img, genre, name, duration, views, _id, siz
 
   const handleOnClick = useCallback(() => {
     history.push(`/details/${_id}`)
-  }, [_id])
+  }, [_id, history])
 
   const classes = useStyles()
   const divStyle = {
